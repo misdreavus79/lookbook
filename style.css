@@ -90,4 +90,7 @@ footer{
 	#section1, #section2, #section3, #section4{
 		padding-top: 200px;
 	}
+	/*#slideshow{
+		display: none; --left it on for the purposes of the test, but normally I'd turn the slideshows off on small screens, and prevent images from loading
+	}*/
 }
