@@ -18,7 +18,6 @@ body{
 	margin-right: 50px;
 }
 .masthead a:hover, .masthead a:active, .masthead .selected{
-	
 	padding-bottom: 5px;
 }
 .masthead a:hover, .masthead a:active{
@@ -26,6 +25,11 @@ body{
 }
 .masthead .selected{
 	border-bottom: 5px solid #000;
+}
+.social{
+	position: fixed;
+	top: 0;
+	right: 20px;
 }
 .main{
 	margin-top: 40px;
@@ -39,9 +43,6 @@ section{
 #section2, #section4{
 	background-color: green;
 	color: white;
-}
-#section2{
-	text-align: center;
 }
 footer{
 	background: #0000ff;
@@ -62,11 +63,31 @@ footer{
 }
 
 /*---- Media Queries ----*/
+@media screen and (max-width: 700px){
+	.social{
+		display: none;
+	}
+}
 @media screen and (max-width: 600px){
 	.masthead{
-		height: 100px;
+		height: 184px;
+		padding: 0;
 	}
-	.masthead a{
+	.masthead a:link, .masthead a:visited{
 		display: block;
+		width: 100%;
+		margin: 0;
+		padding: 15px 0;
+	}
+	.masthead a.selected{
+		border: none;
+		background-color: navy;
+		color: #fff;
+	}
+	.main{
+		margin-top: 200px;
+	}
+	#section1, #section2, #section3, #section4{
+		padding-top: 200px;
 	}
 }

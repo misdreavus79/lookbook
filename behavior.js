@@ -77,7 +77,11 @@ $(document).ready(function(){
 	var containerWidth = slideshowWidth * 6;
 	$('#slideshow').width(slideshowWidth);
 	$('.slideshowContainer').width(containerWidth);
-	console.log(slideshowWidth, $('#slideshow img').first().width());
+	if(slideshowWidth !== $('#slideshow img').first().width()){
+		$('#slideshow img').each(function(){
+			$(this).width(slideshowWidth);
+		});
+	}
 
 	// window.setInterval(function(){
 	// 	slideShowAnimation.animate(slideshowWidth);
