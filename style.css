@@ -15,16 +15,23 @@ body{
 	color: #000;
 	font-weight: bold;
 	text-transform: uppercase;
+	margin-right: 50px;
 }
 .masthead a:hover, .masthead a:active, .masthead .selected{
-	border-bottom: 5px solid #000;
+	
 	padding-bottom: 5px;
+}
+.masthead a:hover, .masthead a:active{
+	color: white;
+}
+.masthead .selected{
+	border-bottom: 5px solid #000;
 }
 .main{
 	margin-top: 40px;
 }
 section{
-	min-height: 600px;
+	min-height: 900px;
 }
 #section1, #section2, #section3, #section4{
 	padding: 50px 20px;
@@ -33,6 +40,9 @@ section{
 	background-color: green;
 	color: white;
 }
+#section2{
+	text-align: center;
+}
 footer{
 	background: #0000ff;
 	color: #fff;
@@ -40,4 +50,23 @@ footer{
 	text-align: center;
 	padding: 20px 0;
 	font-size: 200%;
+}
+#slideshow{
+	overflow: hidden;
+}
+#slideshow img{
+	transition: all .5s;
+}
+#slideshow img{
+	float: left;
+}
+
+/*---- Media Queries ----*/
+@media screen and (max-width: 600px){
+	.masthead{
+		height: 100px;
+	}
+	.masthead a{
+		display: block;
+	}
 }
