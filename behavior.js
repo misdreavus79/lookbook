@@ -73,6 +73,10 @@ $(document).ready(function(){
 			}
 		}
 	});
+
+	
+});
+$(window).load(function(){
 	var slideshowWidth = $('#slideshow img').first().width();
 	var containerWidth = slideshowWidth * 6;
 	$('#slideshow').width(slideshowWidth);
@@ -82,8 +86,7 @@ $(document).ready(function(){
 			$(this).width(slideshowWidth);
 		});
 	}
-
-	// window.setInterval(function(){
-	// 	slideShowAnimation.animate(slideshowWidth);
-	// }, 3000);
+	window.setInterval(function(){
+		slideShowAnimation.animate(slideshowWidth);
+	}, 3000);
 });
